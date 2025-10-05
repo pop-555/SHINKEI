@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Green Match Cards</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="game.js"></script>
+  </head>
+  <body>
+    <main class="game-container">
+      <h1 class="game-title">Green Match Cards</h1>
+
+      <section class="controls" aria-label="ゲーム開始操作">
+        <button id="start-button" type="button">Start</button>
+        <button id="restart-button" type="button" class="hidden">Play Again</button>
+      </section>
+
+      <section class="status-panel hidden" aria-label="ゲーム状況">
+        <p id="current-player" class="status-item" aria-live="polite">プレイヤー1のターンです。</p>
+        <div class="scoreboard">
+          <span id="player1-score" class="status-item">プレイヤー1：0点</span>
+          <span id="player2-score" class="status-item">プレイヤー2：0点</span>
+          <span id="remaining-pairs" class="status-item">残りペア：26</span>
+        </div>
+      </section>
+
+      <p id="message" class="message hidden" role="status" aria-live="polite"></p>
+
+      <section id="card-board" class="card-grid hidden" aria-label="カードボード"></section>
+    </main>
+  </body>
+</html>
